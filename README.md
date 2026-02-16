@@ -36,6 +36,7 @@
 
 ![alt text](https://github.com/Sayward-k8/sdb-hw-12-03/blob/main/img/2.png)
 
+
 # Задание 3*
 Выполните конфигурацию master-master репликации. Произведите проверку.
 
