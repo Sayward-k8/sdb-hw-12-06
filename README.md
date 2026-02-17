@@ -25,7 +25,14 @@
 
 **Плюсы**
 
+   - Клиенты могут считывать данные с любого мастера
+   - Распределяет сетевую нагрузку на запись между мастерами
+   - Простой, автоматический и быстрый переход на другой ресурс
+
 **Минусы**
+
+   - Согласовано только при идеальной работе без сбоев.
+   - В случае сбоя репликации будут проблемы с целостностью данных
 
 # Задание 2
 Выполните конфигурацию master-slave репликации, примером можно пользоваться из лекции.
@@ -34,8 +41,10 @@
 
 # Решение 2
 
-![alt text](https://github.com/Sayward-k8/sdb-hw-12-03/blob/main/img/2.png)
-
+![alt text](https://github.com/Sayward-k8/sdb-hw-12-06/blob/main/img/2.png)
+![alt text](https://github.com/Sayward-k8/sdb-hw-12-06/blob/main/img/2-master.png)
+![alt text](https://github.com/Sayward-k8/sdb-hw-12-06/blob/main/img/2-repl.png)
+![alt text](https://github.com/Sayward-k8/sdb-hw-12-06/blob/main/img/2.1-repl.png)
 
 # Задание 3*
 Выполните конфигурацию master-master репликации. Произведите проверку.
