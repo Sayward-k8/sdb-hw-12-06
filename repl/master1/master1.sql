@@ -1,0 +1,10 @@
+CREATE USER 'repl1'@'%' IDENTIFIED WITH mysql_native_password BY 'pass';
+FLUSH PRIVILEGES;
+GRANT REPLICATION SLAVE ON *.* TO 'repl1'@'%';
+
+CHANGE REPLICATION SOURCE TO
+SOURCE_HOST='compose_mysql_master2',
+SOURCE_USER='repl2',
+SOURCE_PASSWORD='pass';
+
+START REPLICA;
