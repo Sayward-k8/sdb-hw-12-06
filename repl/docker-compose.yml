@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  master:
+    image: mysql:8.4
+    container_name: mysql_master1
+    env_file: .env
+    volumes:
+      - ./master1/master1.sql:/docker-entrypoint-initdb.d/start.sql
+    command:
+      - --server-id=1
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --mysql_native_password=ON
+    ports:
+      - 3311:3306
+    networks:
+      - mysql-net
+  slave:
+    image: mysql:8.4
+    container_name: mysql_master2
+    env_file: .env
+    volumes:
+      - ./master2/master2.sql:/docker-entrypoint-initdb.d/start.sql
+    command:
+      - --server-id=2
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --mysql_native_password=ON
+    ports:
+      - 3310:3306
+    networks:
+      - mysql-net
+networks:
+  mysql-net:
+    driver: bridge
