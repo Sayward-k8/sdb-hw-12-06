@@ -53,7 +53,12 @@
 
 # Решение 3
 
+**master 1**
+
 ![мастер 1](https://github.com/Sayward-k8/sdb-hw-12-06/blob/main/img/master1.png)
+
+**master 2**
+
 ![мастер 2](https://github.com/Sayward-k8/sdb-hw-12-06/blob/main/img/master2.png)
 
 [конфиг](https://github.com/Sayward-k8/sdb-hw-12-06/tree/main/repl)
